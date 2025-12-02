@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts /// Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inconsolata:wght@200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="shortcut icon" href="images/icon-ifood-update.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Delivery de Comida e Mercado - iFood</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="hamburguer" id="hamburguer">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="nav-options">
+                    
+                    <div class="nav-logo">
+                        <img src="images/iFood-logo.png" alt="iFood Logo" onclick="location.href='#'">
+                    </div>
+                    <a href="#" class="options">Entregador</a>
+                    <a href="#" class="options">Restaurante e Mercado</a>
+                    <a href="#" class="options">Carreiras</a>
+                    <a href="#" class="options">iFood Card</a>
+                    <a href="#" class="options">Para Empresas</a>
+                </div>
+                <div class="nav-login">
+                    <button type="button" id="criarConta" class="criar-conta">Criar conta</button>
+                    <button type="button" id="entrar" class="entrar">Entrar</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-one">
+            <div class="container-one-title">
+                <h1>Tudo pra facilitar seu dia a dia</h1>
+                <p>O que você precisa está aqui. Peça e receba onde estiver.</p>
+            </div>
+            <div class="container-one-search">
+                <i class="fa-solid fa-location-pin"></i>
+                <input type="search" placeholder="Endereço de entrega e número">
+                <button type="submit">Buscar</button>
+            </div>
+        </div>
+        <div class="container-one-grid">
+            <div class="container-one-grid-1">
+                <h2>Restaurante</h2>
+                <span>Ver opções <i class="fa-solid fa-chevron-right"></i></span>
+                <img src="images/restaurant.webp" alt="Restaurant" class="burguer">
+            </div>
+            <div class="container-one-grid-2">
+                <h2>Mercado</h2>
+                <span>Buscar Lojas <i class="fa-solid fa-chevron-right"></i></span>
+                <img src="images/market.avif" alt="market" class="kart">
+            </div>
+        </div>
+
+        <div class="container-two-grid-full">
+            <div class="container-two-grid">
+        
+                <div class="container-two-grid-1">
+                    <span class="colorfull"></span>
+                    <img class="img-drinks" src="images/drinks.avif" alt="Bebidas">
+                    <span class="span-drinks">Bebidas <span class="chevron">›</span></span>
+                </div>
+                <div class="container-two-grid-1" id="grid-two-modify-1">
+                    <span class="colorfull"></span>
+                    <img class="img-pharmacy" src="images/pharmacy.avif" alt="Farmácia">
+                    <span class="span-farmacy">Farmácia <span class="chevron">›</span></span>
+                </div>
+                <div class="container-two-grid-1" id="grid-two-modify-2">
+                    <span class="colorfull"></span>
+                    <img class="img-pet-shop" src="images/petshop.avif" alt="Pet shop">
+                    <span class="span-pet-shop">Pet shop <span class="chevron">›</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-three">
+            <div class="container-three-title">
+                <h2>Os melhores restaurantes</h2>
+            </div>
+            <div class="empresas-grid">
+                
+                <div class="e-grid">
+                    <div class="icon-verified">
+                        <img class="verified" src="images/verified-update.svg" alt="Verified">
+                    </div>
+                    <div class="empresa-div">
+                        <img src="images/mcdonalds.avif" alt="Mcdonald's"> 
+                        <div>
+                            <h3>Mcdonald's</h3>
+                            <p>Lanches</p>
+                        </div>
+                    </div>
+                    <div class="empresa-div">
+                        
+                    </div>
+                </div>
+                
+                <div class="e-grid">
+                    <div class="icon-verified">
+                        <img class="verified" src="images/verified-update.svg" alt="Verified">
+                    </div>
+                    <div class="empresa-div">
+                        <img src="images/coco-bambu.avif" alt="Coco Bambu">
+                        <div>
+                            <h3>Coco Bambu</h3>
+                            <p>Frutos do Mar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="e-grid">
+                    <div class="icon-verified">
+                        <img class="verified" src="images/verified-update.svg" alt="Verified">
+                    </div>
+                    <div class="empresa-div">
+                        <img src="images/china-in-box.avif" alt="China in Box">
+                        <div>
+                            <h3>China in Box</h3>
+                            <p>Chinesa</p>
+                        </div>
+                    </div>
+                        <div class="empresa-div">
+                       
+                    </div>
+                </div>
+
+                <div class="e-grid">
+                    <div class="icon-verified">
+                        <img class="verified" src="images/verified-update.svg" alt="Verified">
+                    </div>
+                    <div class="empresa-div">
+                        <img src="images/habibs.avif" alt="Habib's">
+                        <div>
+                            <h3>Habib's's</h3>
+                            <p>Lanches</p>
+                        </div>
+                    </div>
+                    <div class="empresa-div">
+                        
+                    </div>
+                    </div>
+
+                     <div class="e-grid">
+                        <div class="icon-verified">
+                            <img class="verified" src="images/verified-update.svg" alt="Verified">
+                        </div>
+                        <div class="empresa-div">
+                            <img src="images/outback.avif" alt="Outback">
+                            <div>
+                            <h3>Outback Steakhouse's</h3>
+                            <p>Lanches</p>
+                        </div>
+                        </div>
+                        <div class="empresa-div">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cupons">
+                <img src="images/landing-banner-1.webp" alt="Cupom 1">
+                <img src="images/landing-banner-2.webp" alt="Cupo 2">
+                <img src="images/landing-banner-3.webp" alt="Cupo 3">
+            </div>
+        </div>
+
+        <div class="container-four">
+            <h2>Os melhores mercados</h2>
+            <div class="container-four-grid">
+                <div class="cont-four-grid">
+                    <div class="four-grid-img">
+                        <img src="images/supermercado.avif" alt="Dia Supermercado">
+                    </div>
+                    <h3>Dia Supermercado</h3>
+                </div>
+                <div class="cont-four-grid">
+                    <div class="four-grid-img">
+                        <img src="images/big.avif" alt="Big">
+                    </div>
+                    <h3>Big</h3>
+                </div>
+                <div class="cont-four-grid">
+                    <div class="four-grid-img">
+                        <img src="images/eataly.avif" alt="Eataly">
+                    </div>
+                    <h3>Eataly</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-five">
+            <div class="five-grid">
+                <div class="five-content">
+                    <h2>Quer fazer entregas pelo iFood?</h2>
+                    <p>Faça agora o seu cadastro e comece o quanto antes.</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="actr1">
+                    <img src="images/actr1.png" alt="">
+                </div>
+            </div>
+        
+            <div class="five-grid">
+                <div class="five-content">
+                    <h2>A sua fome de crescer ta no iFood</h2>
+                    <p>Cadastre seu restaurante ou o seu mercado</p>
+                    <button>Saiba mais</button>
+                </div>
+                <div class="actr2">
+                    <img src="images/actr2.png" alt="">
+                </div>
+            </div>
+            </div>
+        
+        </div>
+        </div>
+
+        <div class="container-six">
+            <div class="six-grid">
+                <h2>Você tem fome do quê?</h2>
+                <p>Descubra como é ser um FoodLover e faça parte da nossa revolução!</p>
+                <button>Saiba mais</button>
+            </div>
+            <div class="six-grid">
+                <img src="images/food-lover-banner.webp" alt="Food Lover">
+            </div>
+        </div>
+        
+        <div class="container-seven">
+            <img src="images/banner-extended.png" alt="Baner estendido">
+        </div>
+
+        <footer>
+            <div class="container-eight">
+                <div class="eight-grid">
+                    <h4>iFood</h4>
+                    <span>Site Institucional</span>
+                    <span>Fale Conosco</span>
+                    <span>Conta e Segurança</span>
+                    <span>Carreiras</span>
+                    <span>Entregadores</span>
+                </div>
+                <div class="eight-grid">
+                    <h4>Descubra</h4>
+                    <span>Cadastre seu Restaurante ou Mercado</span>
+                    <span>iFood Shop</span>
+                    <span>iFood Empresas</span>
+                    <span>Blog iFood Empresas</span>
+                </div>
+                <div class="eight-grid">
+                    <h4>Social</h4>
+                    <div class="badges">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-nine">
+                <div class="nine-grid-1">
+                    <div class="nine-grid-img">
+                        <img src="images/ifood.png" alt="iFood rodapé">
+                    </div>
+                    <div class="nine-grid-content">
+                        <span>&copy; Copyright 2021 - iFood - Todos os direitos reservados iFood com Agência de Restaurantes Online S.A.</span>
+                        <span>CNPJ 14.380.200/0001-21 / Avenida dos Autonomistas, nº 1496, Vila Yara, Osasco/SP - CEP 06.020-902</span>
+                    </div>
+                </div>
+                <div class="nine-grid-2">
+                    <span>Termos e condições de uso</span>
+                    <span>Código de conduta</span>
+                    <span>Privacidade</span>
+                    <span>Dicas de segurança</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
