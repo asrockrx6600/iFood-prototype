@@ -664,7 +664,7 @@ body {
     color: var(--text);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     body {
         padding-top: 12vh;
@@ -744,8 +744,10 @@ body {
 
     .container-one-search button,
     .container-one-search input {
+        
         height: 3rem;
         width: 100%;
+        padding: 0 .5rem 0 4rem;
     }
 
     .container-one-search input::placeholder {
@@ -797,6 +799,7 @@ body {
 
     .container-two-grid {
         grid-template-columns: repeat(3, auto);
+        width: 100%;
     }
 
     .colorfull {
@@ -820,6 +823,12 @@ body {
         position: absolute;
         top: -5px;
         width: 15%;
+    }
+
+    .span-drinks,
+    .span-farmacy,
+    .span-pet-shop {
+        font-size: .8rem;
     }
 
     .container-three {
@@ -911,7 +920,8 @@ body {
 
     .container-nine {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: start;
+        line-height: 1.2;
     }
 
     .nine-grid-2 {
