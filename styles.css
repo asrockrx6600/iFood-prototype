@@ -28,7 +28,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: var(--white);
     padding-top: 20vh;
-    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -48,21 +47,16 @@ body {
     display: none;
     flex-direction: column;
     gap: .2rem;
-    width: 2%;
-    height: 20px;
+    width: 1.5rem;
     cursor: pointer;
 }
 
 .hamburguer span {
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: var(--text);
-}
-
-.hLogo img {
-    width: 6rem;
-    height: 6rem;
-    cursor: pointer;
+    transition: 300ms ease-in-out;
+    transform-origin: center;
 }
 
 .nav-logo img {
@@ -131,7 +125,6 @@ body {
     padding-top: 8vh;
     gap: 4rem;
     width: 100%;
-    height: 45vh;
     background: var(--nav-background);
 }
 
@@ -204,12 +197,12 @@ body {
 
 .container-one-grid {
     display: grid;
-    grid-template-columns: repeat(2, 32%);
+    grid-template-columns: repeat(2, minmax(100px, 400px));
     justify-content: center;
     align-items: center;
     gap: 2rem;
     width: 100%;
-    height: 50vh;
+    padding-top: 10vh;
     background: linear-gradient(var(--nav-background) 40%, var(--white) 30%);
 }
 
@@ -279,7 +272,6 @@ body {
 .container-two-grid-full {
     width: 70%;
     margin: 10vh auto;
-    height: 20vh;
 }
 
 .container-two-grid {
@@ -363,8 +355,7 @@ body {
 
 .empresas-grid {
     display: grid;
-    flex-direction: column;
-    grid-template-columns: repeat(5, 18%);
+    grid-template-columns: repeat(5, minmax(150px, 230px));
     place-content: center;
     overflow: hidden;
     gap: 1rem;
@@ -409,7 +400,7 @@ body {
 
 .cupons {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, minmax(200px, 400px));
     width: 95%;
     gap: 1.5rem;
     margin: 10vh auto;
@@ -419,9 +410,8 @@ body {
 .container-four {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 100%;
-    height: 60vh;
     border-top: 2px solid #f2f2f2;
     margin: 10vh auto;
     padding: 10vh 0 0 5vh;
@@ -429,7 +419,7 @@ body {
 
 .container-four-grid {
     display: grid;
-    grid-template-columns: repeat(3, 20%);
+    grid-template-columns: repeat(3, minmax(150px, 250px));
     gap: 1rem;
 }
 
@@ -437,10 +427,9 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 1rem;
     border: 1px solid #d4d4d4;
     border-radius: 10px;
-    height: 22vh;
     transition: 400ms ease-in-out;
     cursor: pointer;
 }
@@ -477,8 +466,8 @@ body {
 
 .container-five {
     display: grid;
-    grid-template-columns: repeat(2, 45%);
-    height: 75vh;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10vh 0 30vh 0;
     border-bottom: 2px solid #f7f7f7;
 }
 
@@ -538,14 +527,14 @@ body {
 
 .actr1 {
     position: absolute;
-    top: 210px;
+    top: 150px;
     left: 100px;
 }
 
 .actr2 {
     position: absolute;
-    top: 200px;
-    right: 310px;
+    top: 150px;
+    left: 100px;
 }
 
 .container-six {
@@ -593,7 +582,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    width: 95%;
+    width: 100%;
     padding: 10vh 10vh;
     border-top: 3rem solid #F2F2F2;
 }
@@ -638,7 +627,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     width: 90%;
     margin: 0 auto;
-    padding: 5vh 0 5vh 0;
+    padding: 5vh 0;
     gap: 1rem;
     border-top: 1px solid #e0e0e0;
 }
@@ -682,25 +671,64 @@ body {
     }
 
     .navbar {
-        height: auto;
-        padding: 1rem;
+        height: 12vh;
+        padding: 0 1rem 0 1rem;
+    }
+
+    .nav-logo img {
+        width: 6rem;
+        height: 6rem;
     }
     
-    .options {
-        display: none;
+    .nav-options {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: #f7f7f7;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 400ms ease, opacity 400ms ease;
+        z-index: 999;
+    }
+
+    .nav-options.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-options .options {
+        font-size: 1.3rem;
     }
 
     .hamburguer {
         display: flex;
     }
 
-    .nav-logo img {
-        width: 4rem;
-        height: 4rem;
+    .hamburguer.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
     }
 
     .criar-conta {
         display: none;
+    }
+
+    .entrar {
+        padding: .7rem;
     }
 
     .container-one {
@@ -714,8 +742,6 @@ body {
         gap: 1rem;
     }
 
-    
-
     .container-one-search button,
     .container-one-search input {
         height: 3rem;
@@ -728,10 +754,17 @@ body {
         margin: 0 auto;
     }
 
-    .container-one-grids {
+    .container-one-grid {
         grid-template-columns: 1fr;
         height: auto;
         padding-bottom: 4vh;
+    }
+
+    .container-one-grid-1,
+    .container-one-grid-2 {
+        width: 95%;
+        margin: 0 auto;
+        gap: .5rem;
     }
 
     .burguer, .kart {
@@ -747,15 +780,30 @@ body {
     }
 
     .container-two-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, auto);
     }
 
-    .img-drinks,
-    .img-pharmacy,
+    .colorfull {
+        width: 100%;
+        height: 3vh;
+    }
+
+    .img-drinks {
+        position: absolute;
+        top: -25px;
+        width: 20%;
+    }
+
+    .img-pharmacy {
+        position: absolute;
+        top: -23px;
+        width: 15%;
+    }
+
     .img-pet-shop {
-        position: static;
-        margin: 0 auto;
-        width: 60%;
+        position: absolute;
+        top: -5px;
+        width: 15%;
     }
 
     .container-three {
@@ -764,7 +812,9 @@ body {
 
     .empresas-grid {
         grid-template-columns: 1fr;
-        overflow: visible;
+        width: 95%;
+        margin: 0 auto;
+        
     }
 
     .cupons {
@@ -781,25 +831,61 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .container-five {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0 2rem 0;
+    }
+
     .five-grid {
         width: 100%;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .five-content {
         align-items: flex-start;
+        justify-content: flex-start;
+        width: 90%;
+        padding: .5rem 0 .5rem 9rem;
+    }
+
+    .five-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .five-content button {
+        padding: 1rem;
     }
 
     .actr1, .actr2 {
-        display: flex;
-        justify-content: center;
-        position: static;
-        margin: 0 auto;
+        position: absolute;
+        top: auto;
+        left: 5px; 
+    }
+
+    .actr1 img, .actr2 img {
+        width: 130px;
+        height: 130px;
     }
 
     .container-six {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         width: 95%;
     }
 
+    .six-grid {
+        text-align: center;
+    }
+
     .six-grid button {
-        width: 100%;
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .container-seven { 
+       display: none;
     }
 
     .container-eight {
